@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title></title>
+
+  <style>
+    /* 全局重置樣式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 設置網頁背景和字體樣式 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 滿版高度 */
+      padding: 20px;
+      text-align: center;
+    }
+
+     /* 主視覺區塊 */
+    .hero {
+      position: relative;
+      background-image: url('images/payment/payment_success.png'); /* 替換為你的背景圖片網址 */
+      background-size: contain; /* 等比縮小，圖片完整顯示 */
+      background-position: center; /* 背景圖片居中 */
+      background-repeat: no-repeat; /* 禁止背景重複 */
+      width: 100%;
+      max-width: 900px; /* 最大寬度設定為圖片寬度 */
+      margin: 20px;
+      color: white;
+      height: 0;
+      padding-bottom: calc(100% * (600 / 900)); 
+    }
+
+
+    /* 主題 (標題) */
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    /* 內文 (副標題) */
+    p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    /* 按鈕容器：使用絕對定位來控制位置 */
+    .button-container {
+      position: absolute; /* 絕對定位 */
+      top: 73%; /* 距離 hero 顶部 70% */
+      left: 29.5%; /* 距離 hero 左側 50% */
+      transform: translate(-50%, -50%); /* 使用 transform 居中 */
+      display: flex;
+      gap: 20px; /* 按鈕之間的間距 */
+    }
+     .button-container2 {
+      position: absolute; /* 絕對定位 */
+      top: 73%; /* 距離 hero 顶部 70% */
+      left: 74.5%; /* 距離 hero 左側 50% */
+      transform: translate(-50%, -50%); /* 使用 transform 居中 */
+      display: flex;
+      gap: 20px; /* 按鈕之間的間距 */
+    }
+	 .button-container3 {
+      position: absolute; /* 絕對定位 */
+      top: 82%; /* 距離 hero 顶部 70% */
+      left: 44%; /* 距離 her50%, -50%); /* 使用 transform 居中 */
+      display: flex;
+      gap: 20px; /* 按鈕之間的間距 */
+    }
+    /* 按鈕樣式 */
+    .cta-button {
+      display: inline-block;
+      background-color: #d10f0f;
+      color: white;
+      padding: 5px 15px;
+      font-size: 12px;
+	  border: 5px solid rgba(153, 255, 255, 1); /* 藍色邊框（稍微透明） */
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      cursor: pointer;
+	  box-shadow: 0 0 15px rgba(153, 255, 255, 0.8); /* 模糊光暈效果 */
+      transition: background-color 0.3s ease;
+    }
+   .cta-button-comeback {
+      display: inline-block;
+      background-color: #d10f0f;
+      color: white;
+      padding: 6px 18px;
+      font-size: 15px;
+      border: 2px solid rgba(153, 255, 255, 1); /* 藍色邊框（稍微透明） */
+      border-radius: 20px;
+      text-decoration: none;
+      cursor: pointer;
+	  box-shadow: 0 0 15px rgba(153, 255, 255, 0.8); /* 模糊光暈效果 */
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #ff6347; /* 滑過按鈕時的顏色變化 */
+    }
+    .cta-button-comeback:hover {
+      background-color: #ff6347; /* 滑過按鈕時的顏色變化 */
+    }
+
+    /* 響應式調整 */
+	  
+    @media (max-width: 1100px) {
+      .cta-button {
+        padding: 4px 12px;
+        font-size: 11px;
+      }
+
+	.cta-button-comeback {
+        padding: 4px 12px;
+        font-size: 13px;
+      }
+
+      /* 調整按鈕位置以適應小螢幕 */
+      .button-container {
+        top: 75.5%;  
+        left: 29%;
+      }
+	  .button-container2 {
+        top: 75.5%;  
+        left: 73.5%;
+      }
+		.button-container3 {
+        top: 86%;  
+        left: 45%;
+      }
+    }
+    @media (max-width: 768px) {
+      .cta-button {
+        padding: 3px 9px;
+        font-size: 8px;
+      }
+	.cta-button-comeback {
+        padding: 4px 12px;
+        font-size: 11px;
+      }		
+      /* 調整按鈕位置以適應小螢幕 */
+      .button-container {
+        top: 76%;  
+        left: 29%;
+      }
+	  .button-container2 {
+        top: 76%;  
+        left: 74.5%;
+      }
+		.button-container3 {
+        top: 85%;  
+        left: 41%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .cta-button {
+        padding: 3px 9px;
+        font-size: 7px;
+      }
+	.cta-button-comeback {
+        padding: 4px 12px;
+        font-size: 10px;
+      }		
+
+      /* 當螢幕較小時，按鈕垂直排列 */
+      .button-container {
+        top: 76%;  
+        left: 29%;
+      }
+	  .button-container2 {
+        top: 76%;  
+        left: 74.5%;
+      }
+	.button-container3 {
+        top: 84.5%;  
+        left: 41%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 主視覺區塊 -->
+  <div class="hero">
+    <div class="button-container">
+      <a href="https://www.nss.com.tw/online-marketing" class="cta-button">立即使用</a>
+    </div>
+	<div class="button-container2">
+      <a href="https://www.nss.com.tw/websitebuilder" class="cta-button">立即使用</a>
+    </div>
+     <div class="button-container3">
+      <a href="https://hb.nss.com.tw/index.php?cmd=clientarea&action=invoice" class="cta-button-comeback">返回會員系統</a>
+    </div>  
+	  
+  </div>
+</body>
+</html>
