@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page with Background Image</title>
+	 <!-- 引入 Google 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Rounded:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			font-family: 'Roboto Rounded', sans-serif; /* 設定為 Google 圓角字體 */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .container h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #d10f0f ;
+        }
+        
+        .container p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .button-container img {
+            width: 100%;
+            max-width: 1000px; /* 限制圖片的最大寬度 */
+            height: auto; /* 自動縮放高度以保持圖片比例 */
+        }
+        .container button {
+            padding: 10px 20px;
+			color: white;
+            font-size: 1em;
+            border: 2px solid rgba(153, 255, 255, 1); /* 藍色邊框（稍微透明） */ 
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(153, 255, 255, 0.8); /* 模糊光暈效果 */
+            background-color: #d10f0f;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .container button:hover {
+            background-color: #ff6347;
+        }
+
+        /* 手機縱向 */
+        @media (max-width: 320px) {
+            .container h1 { font-size: 1.4em; }
+            .container p { font-size: 0.9em; }
+            .container button { padding: 8px 16px; font-size: 0.9em; }
+        }
+
+        /* 375px 寬度：主流手機 */
+        @media (min-width: 321px) and (max-width: 375px) {
+            .container h1 { font-size: 1.6em; }
+            .container p { font-size: 1em; }
+            .container button { padding: 9px 18px; font-size: 1em; }
+        }
+
+        /* 414px 寬度：較大手機 */
+        @media (min-width: 376px) and (max-width: 414px) {
+            .container h1 { font-size: 1.8em; }
+            .container p { font-size: 1.1em; }
+            .container button { padding: 10px 20px; font-size: 1.1em; }
+        }
+
+        /* 小平板 */
+        @media (min-width: 415px) and (max-width: 768px) {
+            .container h1 { font-size: 2em; }
+            .container p { font-size: 1.2em; }
+            .container button { padding: 12px 22px; font-size: 1.2em; }
+        }
+
+        /* 桌上型電腦 */
+        @media (min-width: 992px) and (max-width: 1200px) {
+            .container h1 { font-size: 2.4em; }
+            .container p { font-size: 1.4em; }
+            .container button { padding: 15px 26px; font-size: 1.4em; }
+        }
+
+        /* 大桌上型螢幕 */
+        @media (min-width: 1200px) {
+            .container { max-width: 1000px; }
+            .container h1 { font-size: 2.6em; }
+            .container p { font-size: 1.5em; }
+            .container button { padding: 16px 28px; font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+
+<picture>
+    <source srcset="images/payment/payment_fail.png" media="(min-width: 1200px)">
+    <source srcset="images/payment/payment_fail.png" media="(min-width: 768px)">
+    <source srcset="images/payment/image-tablet.jpg" media="(min-width: 576px)">
+    <source srcset="images/payment/image-mobile.jpg" media="(max-width: 575px)">
+    <div class="container" style="background-image: url('images/payment/payment_fail.png');">
+        <h1>線上刷卡成功!</h1>
+        <p>感謝您的支持！我們已經收到您的付款，請放心等待服務或產品的安排。
+		</p>
+		<div class="button-container">
+        <img src="images/payment/phone.jpeg" alt="Icon"></div>
+        <button>返回會員系統</button>
+    </div>
+</picture>
+
+</body>
+</html>
