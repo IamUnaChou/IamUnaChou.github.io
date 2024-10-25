@@ -1,26 +1,4 @@
-@charset "utf-8";
-html {
-	overflow: -moz-scrollbars-vertical;
-}
-
-body {
-	margin:0px 0px 0px 0px;
-	background:url(../images/bg.png) repeat #fff;
-}
-li{
-    list-style:none;
-}
-ul{
-	margin:0px;
-	padding:0px;
-}
-img{
-	border:0px;
-}
-
-
-
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
