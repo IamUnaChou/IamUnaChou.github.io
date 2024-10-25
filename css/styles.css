@@ -10,7 +10,7 @@ body, html {
 }
 
 .container {
-    background-image: url('../images/payment_fail.png');
+    background-image: url('../images/payment/payment_fail.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
