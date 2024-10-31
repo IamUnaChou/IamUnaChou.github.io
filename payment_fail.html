@@ -186,7 +186,7 @@
 			padding: 15px 0px 0px 0px;
 			margin-top: 10px;
 			position: relative;
-			 background-color:aqua;
+			 background-color:beige ;
         }
 		
 		/* 上方的模糊效果 */
@@ -222,7 +222,7 @@
             content: "●";
             color: #d10f0f; /* 設定紅色 */
             font-weight: bold;
-			font-size:1.6em; /* 調整符號大小 */
+			font-size:0.9em; /* 調整符號大小 */
 		}
 
 		.QA-container span {
@@ -442,6 +442,7 @@
             .container a { padding: 6px 22px; font-size: 1.7em; margin-bottom: 30px; }
 			.container h4 {font-size: 0.9em; margin: 20px }
             .QA-container p { font-size: 1em;  max-width: 700px; /* 最小螢幕寬度，讓段落更容易自動換行 */ line-height: 1.3em;}
+			.QA-container p::before {font-size:1.1em; }/* 調整符號大小 */
 			.QA-container h5  { font-size: 1em;  }
 			.QA-container h3  { font-size: 0.9em; line-height: 1.2em; }
 			.QA-container span {font-size:1.5em; }
@@ -466,6 +467,7 @@
             .container p { font-size: 1.0em; }
             .container a { padding:5px 20px 7px 20px; font-size: 1.2em; }
 			.container { background-image: url('images/payment/image-desktop.png'); }
+			.QA-container p::before {font-size:1.5em; }/* 調整符號大小 */
         }
 
         /* 大桌上型螢幕 */
@@ -476,6 +478,7 @@
             .container p { font-size: 1.3em; }
             .container a { padding:5px 20px 7px 20px; font-size: 1.2em; }
 			.container { background-image: url('images/payment/image-desktop.png'); }
+            .QA-container p::before {font-size:1.6em; }/* 調整符號大小 */
 			.coupon p { font-size: 0.85em; }
 			.coupon a { padding:7px 20px 7px 20px; font-size: 0.9em; }
 			.QA-container p  {font-size: 0.85em;  }
